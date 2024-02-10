@@ -1,9 +1,10 @@
 :root {
-    --color-1: #1DB954;
+    --color-1: #19E68C;
     --color-2: #242424;
     --color-3: #000000;
     --color-4: #FFFFFF;
     --color-5: #121212;
+    --color-6: #a7a7a7;
     --font-size-1: 1rem;
     --font-size-2: 1.2rem;
     --font-size-3: 1.8rem;
@@ -11,7 +12,7 @@
     --shadow-2: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     --border-radius-1: .25rem;
     --border-radius-2: .5rem;
-    --font-family-1: 'Poppins', sans-serif;
+    --font-family-1: 'Lato', sans-serif;
     --animation-1: 200ms;
 }
 
@@ -33,4 +34,16 @@ button {
 
 button:disabled {
     opacity: .5;
+}
+
+.text-body-medium-bold {
+    font-weight: 700;
+}
+
+.text-body-small {
+    font-weight: 400;
+}
+
+.text-size-smaller {
+    font-size: 0.902rem;
 }

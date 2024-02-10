@@ -1,0 +1,11 @@
+<div class="container-article" *ngFor="let item of defaultOption">
+    <div class="container-article-description">
+        <span class="text-body-medium-bold title">{{item.title}}</span>
+        <span class="text-body-small text-size-smaller">{{item.description}}</span>
+    </div>
+    <div>
+        <button class="button-primary">
+            <span>{{item.button}}</span>
+        </button>
+    </div>
+</div>
