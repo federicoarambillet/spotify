@@ -2,11 +2,11 @@
     align-items: flex-start;
     background: var(--color-2);
     border-radius: 8px;
-    gap: 23px;
+    gap: 19px;
     justify-content: center;
-    margin: 8px 0;
+    /* margin: 8px 0; */
     padding: 16px 20px;
-    margin-bottom: 8%;
+    margin-bottom: 3%;
 }
 
 .container-article .title{

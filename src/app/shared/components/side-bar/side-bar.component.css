@@ -1,19 +1,24 @@
 /* General */
 .side-bar {
-    width: 23rem;
+    /* min-width: 19rem; */
+    /* position: fixed; */
+    /* top: 0;
+    left: 0; */
+    
+    height: 100vh;
 }
 
 .side-bar-separator {
     margin: 0.5rem 0;
 }
 
-.container-side-bar-main {
+/* .container-side-bar-main {
     height: 20vh;
-}
+} */
 
 /* Main */
 .container-side-bar-link {
-    height: 75vh;
+    height: 100vh;
 }
 
 .side-bar-link {
@@ -85,20 +90,17 @@
 .side-about {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 8px;
     text-decoration: none;
     line-height: inherit;
     border: none;
     padding: 0px;
     color: var(--text-subdued, #6a6a6a);
-    margin: 65px 0;
     padding: 2px 20px;
 }
 
 .side-about div span {
     cursor: pointer;
     box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
     margin-block: 0px;
     font-size: 0.6875rem;
     font-weight: 400;
@@ -107,7 +109,7 @@
 
 /* Language */
 .about-link-container {
-    margin-bottom: 32px;
+    margin: 22px 0 22px 0;
     padding: 0 24px;
 }
 

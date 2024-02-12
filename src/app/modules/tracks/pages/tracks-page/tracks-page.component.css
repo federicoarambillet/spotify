@@ -1,0 +1,13 @@
+.tracks-page {
+    padding: 1rem;
+    /* background-color: var(--color-5); */
+
+
+    display: flex;
+    flex-flow: row wrap;
+    gap: 24px;
+    height: 100vh;
+    overflow-y: auto;
+
+ 
+}

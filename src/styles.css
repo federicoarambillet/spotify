@@ -24,6 +24,7 @@ body {
     font-family: var(--font-family-1);
     font-size: var(--font-size-1);
     color: var(--color-4);
+    overflow: hidden;
 }
 
 input,
