@@ -3,7 +3,7 @@
         <!-- <div><i class="uil uil-ellipsis-h"></i></div> -->
         <ul class="side-bar-link">
             <app-logo></app-logo>
-            <li *ngFor="let item of mainMenu.defaultOptions">
+            <li [routerLink]="item.router" *ngFor="let item of mainMenu.defaultOptions">
                 <div class="list-wrapper-item">
                     <span [ngClass]="['uil',item.icon]">{{item.name}}</span>
                     <span class="side-bar-link list-label">{{item.name}}</span>
@@ -25,11 +25,11 @@
                 </span>
                 <span class="side-bar-link list-label side-library">Your Library</span>
             </div>
-            <span class="material-symbols-outlined">add</span>
+            <span (click)="goTo($event)" class="material-symbols-outlined">add</span>
         </div>
 
 
-        <app-quick-access></app-quick-access>
+        <!-- <app-quick-access></app-quick-access> -->
 
         <div class="side-bar-separator"></div>
         <div class="side-bar-link side-about">

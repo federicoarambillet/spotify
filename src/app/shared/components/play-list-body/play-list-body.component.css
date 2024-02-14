@@ -19,6 +19,7 @@
     text-transform: uppercase;
     color: var(--color-4);
     opacity: .7;
+    cursor: pointer;
 }
 
 .play-list-rows {
