@@ -20,27 +20,46 @@ export class TracksPageComponent implements OnInit, OnDestroy {
 
   constructor(private trackService: TrackService) { }
 
+  // ngOnInit(): void {
+  //   this.trackService.getAllTrack$().subscribe(response => {
+  //     this.tracksTrending = response;
+  //   })
+
+  //   this.trackService.getAllRandom$().subscribe(response => {
+  //     this.tracksRandom = response;
+  //   })
+  // const observer1$ = this.trackService.dataTracksTrending$.subscribe(response => {
+  //   this.tracksTrending = response;
+  //   this.tracksRandom = response;
+  // })
+
+  // const observer2$ = this.trackService.dataTracksRandom$.subscribe(response => {
+  //   this.tracksRandom = [... this.tracksRandom, ...response];
+  // })
+
+  // this.listObservers$ = [observer1$, observer2$]
+
+
   ngOnInit(): void {
-    this.trackService.getAllTrack$().subscribe(response => {
-      this.tracksTrending = response;
-    })
+    this.loadDataAll() //TODO 📌📌
+    this.loadDataRandom() //TODO 📌📌
+  }
 
-    this.trackService.getAllRandom$().subscribe(response => {
-      this.tracksRandom = response;
-    })
-    // const observer1$ = this.trackService.dataTracksTrending$.subscribe(response => {
-    //   this.tracksTrending = response;
-    //   this.tracksRandom = response;
-    // })
+  async loadDataAll(): Promise<any> {
+    this.tracksTrending = await this.trackService.getAllTracks$().toPromise()
 
-    // const observer2$ = this.trackService.dataTracksRandom$.subscribe(response => {
-    //   this.tracksRandom = [... this.tracksRandom, ...response];
-    // })
+  }
 
-    // this.listObservers$ = [observer1$, observer2$]
+  loadDataRandom(): void {
+    this.trackService.getAllRandom$()
+      .subscribe((response: TrackModel[]) => {
+        this.tracksRandom = response
+      })
   }
 
   ngOnDestroy(): void {
     // this.listObservers$.forEach(u => u.unsubscribe());
   }
+
+
 }

@@ -4,7 +4,7 @@ import { TrackModel } from '@core/tracks.model';
 // import * as dataRaw from '../../../data/tracks.json';
 import { environment } from './../../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+import { map, catchError } from 'rxjs/operators';
 
 
 
@@ -41,7 +41,7 @@ export class TrackService {
 
   }
 
-  getAllTrack$(): Observable<any> {
+  getAllTracks$(): Observable<any> {
     return this.http.get(`${this.URL}/tracks`).pipe(
       map(({ data }: any) => {
         return data;
@@ -55,6 +55,10 @@ export class TrackService {
         map(({ data }: any) => {
           return data.reverse();
         }),
+        catchError((err) => {
+          const { status, statusText } = err;
+          return of([])
+        })
         // map((dataRevertida) => {
         //   return dataRevertida.filter((track: TrackModel) => track._id != 1);
         // })
