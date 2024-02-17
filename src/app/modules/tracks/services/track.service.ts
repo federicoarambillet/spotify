@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { TrackModel } from '@core/tracks.model';
+import { TrackModel } from '@core/models/tracks.model';
 // import * as dataRaw from '../../../data/tracks.json';
 import { environment } from './../../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
