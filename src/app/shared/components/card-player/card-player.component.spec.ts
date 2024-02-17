@@ -8,10 +8,12 @@ describe('CardPlayerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CardPlayerComponent]
+      declarations: [ CardPlayerComponent ]
     })
     .compileComponents();
-    
+  });
+
+  beforeEach(() => {
     fixture = TestBed.createComponent(CardPlayerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -1,23 +1,29 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component, Input, OnInit } from '@angular/core';
+import { TrackModel } from '@core/models/tracks.model';
 
-import { PlayListBodyComponent } from './play-list-body.component';
 
-describe('PlayListBodyComponent', () => {
-  let component: PlayListBodyComponent;
-  let fixture: ComponentFixture<PlayListBodyComponent>;
+@Component({
+  selector: 'app-play-list-body',
+  templateUrl: './play-list-body.component.html',
+  styleUrls: ['./play-list-body.component.css']
+})
+export class PlayListBodyComponent implements OnInit {
+  @Input() tracks: TrackModel[] = []
+  optionSort: { property: string | null, order: string } = { property: null, order: 'asc' }
+  constructor() { }
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [PlayListBodyComponent]
-    })
-    .compileComponents();
-    
-    fixture = TestBed.createComponent(PlayListBodyComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  ngOnInit(): void {
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  }
+
+  changeSort(property: string): void {
+    const { order } = this.optionSort
+    this.optionSort = {
+      property,
+      order: order === 'asc' ? 'desc' : 'asc'
+    }
+    console.log(this.optionSort);
+
+  }
+
+}

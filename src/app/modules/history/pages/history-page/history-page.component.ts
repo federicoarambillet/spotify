@@ -4,21 +4,18 @@ import { SearchService } from '@modules/history/services/search.service';
 import { Observable, of } from 'rxjs';
 
 @Component({
-    selector: 'app-history-page',
-    templateUrl: './history-page.component.html',
-    styleUrl: './history-page.component.css'
+  selector: 'app-history-page',
+  templateUrl: './history-page.component.html',
+  styleUrls: ['./history-page.component.css']
 })
 export class HistoryPageComponent implements OnInit {
-    listResults$: Observable<any> = of([]);
+  listResults$: Observable<any> = of([])
+  constructor(private searchService: SearchService) { }
 
-    constructor(private searchService: SearchService) { }
+  ngOnInit(): void {
+  }
 
-    ngOnInit(): void {
-    }
-
-    receiveData(event: string): void {
-        this.listResults$ = this.searchService.searchTracks$(event)
-    }
-
-
+  receiveData(event: string): void {
+    this.listResults$ = this.searchService.searchTracks$(event)
+  }
 }

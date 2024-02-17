@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 
 import { FavoritesRoutingModule } from './favorites-routing.module';
 import { SharedModule } from '@shared/shared.module';
-import { FavoritesPageComponent } from './pages/favorites-page/favorites-page.component';
+import { FavoritePageComponent } from './pages/favorites-page/favorite-page.component';
 
 
 @NgModule({
   declarations: [
-    FavoritesPageComponent
+    FavoritePageComponent
   ],
   imports: [
     CommonModule,

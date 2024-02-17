@@ -34,7 +34,6 @@ export class MediaPlayerComponent implements OnInit, OnDestroy {
     const percentageFromX = (clickX * 100) / width
     console.log(`Click(x): ${percentageFromX}`);
     this.multimediaService.seekAudio(percentageFromX)
-
   }
 
 

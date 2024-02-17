@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FavoritesPageComponent } from './pages/favorites-page/favorites-page.component';
+import { FavoritesPageComponent } from './pages/favorites-page/favorite-page.component';
 
 const routes: Routes = [
   {

@@ -17,8 +17,8 @@ export class SearchComponent implements OnInit {
 
   }
 
-  callSearch(term: string): void {
-    if (term.length >= 3) {
+  callSearch(term: string | Event): void {
+    if (term.toString().length >= 3) {
       this.callBackData.emit(term);
     }
   }
