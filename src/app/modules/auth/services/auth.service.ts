@@ -10,7 +10,7 @@ import { Observable, tap } from 'rxjs';
 })
 export class AuthService {
   private readonly URL = environment.api
-  constructor(private http: HttpClient, private cookie: CookieService) { }
+  constructor(private http: HttpClient) { }
 
   sendCredentials(email: string, password: string): Observable<any> {
     const body = {
@@ -19,8 +19,9 @@ export class AuthService {
     }
     return this.http.post(`${this.URL}/auth/login`, body).pipe(
       tap((responseOK: any) => {
-        const { tokenSession, data } = responseOK
-        this.cookie.set('token_service', tokenSession, 4, '/')
+        console.log(responseOK);
+        // const { tokenSession, data } = responseOK
+        // this.cookie.set('token_service', tokenSession, 4, '/')
       })
     )
   }

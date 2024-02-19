@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, inject } from '@angular/core';
 import { TrackModel } from '@core/models/tracks.model';
 import { MultimediaService } from '@shared/services/multimedia.service';
 
@@ -12,13 +12,14 @@ export class CardPlayerComponent implements OnInit {
   // @Input() track!: TrackModel;
   @Input() track: TrackModel = { _id: 0, name: '', album: '', url: '', cover: '' };
 
+  multimediaService = inject(MultimediaService);
 
-  constructor(private multimediaService: MultimediaService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
   sendPlay(track: TrackModel): void {
-    this.multimediaService.trackInfo$.next(track);
+    this.multimediaService.trackInfoSignal.set(track);
   }
 }

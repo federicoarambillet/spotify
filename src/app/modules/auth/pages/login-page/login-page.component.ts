@@ -14,8 +14,8 @@ export class LoginPageComponent implements OnInit {
   errorSession: boolean = false
   formLogin: UntypedFormGroup = new UntypedFormGroup({});
 
-  constructor(private authService: AuthService, private cookie: CookieService,
-    private router: Router) { }
+  constructor(private authService: AuthService, private router: Router, private cookie: CookieService,
+  ) { }
 
   ngOnInit(): void {
     this.formLogin = new UntypedFormGroup(
@@ -38,7 +38,7 @@ export class LoginPageComponent implements OnInit {
     const { email, password } = this.formLogin.value
     this.authService.sendCredentials(email, password)
       //TODO: 200 <400
-      .subscribe(responseOk => { 
+      .subscribe(responseOk => {
         const { tokenSession, data } = responseOk
         this.cookie.set('token', tokenSession, 4, '/')
         this.router.navigate(['/', 'tracks'])
