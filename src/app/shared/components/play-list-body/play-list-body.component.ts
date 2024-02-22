@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { TrackModel } from '@core/models/tracks.model';
+import { TrackService } from '@modules/tracks/services/track.service';
 
 
 @Component({
@@ -10,10 +11,15 @@ import { TrackModel } from '@core/models/tracks.model';
 export class PlayListBodyComponent implements OnInit {
   @Input() tracks: TrackModel[] = []
   optionSort: { property: string | null, order: string } = { property: null, order: 'asc' }
-  constructor() { }
+
+  constructor(private trackService: TrackService) { }
 
   ngOnInit(): void {
+    // this.loadDataAll();
+  }
 
+  async loadDataAll(): Promise<any> {
+    this.tracks = await this.trackService.getAllTracks$().toPromise()
   }
 
   changeSort(property: string): void {
@@ -22,8 +28,6 @@ export class PlayListBodyComponent implements OnInit {
       property,
       order: order === 'asc' ? 'desc' : 'asc'
     }
-    console.log(this.optionSort);
-
   }
 
 }

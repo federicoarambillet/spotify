@@ -1,5 +1,4 @@
-import { Component, OnDestroy, OnInit, ViewChild, ElementRef, inject, signal, effect } from '@angular/core';
-import { TrackModel } from '@core/models/tracks.model';
+import { Component, ViewChild, ElementRef, inject, effect } from '@angular/core';
 import { MultimediaService } from '@shared/services/multimedia.service';
 import { Subscription } from 'rxjs';
 
@@ -23,8 +22,6 @@ export class MediaPlayerComponent {
     })
   }
 
-
-
   handlePosition(event: MouseEvent): void {
     const elNative: HTMLElement = this.progressBar.nativeElement
     const { clientX } = event
@@ -34,6 +31,5 @@ export class MediaPlayerComponent {
     console.log(`Click(x): ${percentageFromX}`);
     this.multimediaService.seekAudio(percentageFromX)
   }
-
 
 }

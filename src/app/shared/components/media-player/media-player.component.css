@@ -20,7 +20,7 @@
 .media-player .media-player--wrapper .player-center {
     display: flex;
     align-content: center;
-    align-items: center;
+    width: 100%;
 }
 
 .media-player--wrapper .artist {
@@ -28,10 +28,10 @@
     padding: 0 .5rem;
 }
 
-.media-player--wrapper .player-audio {
+/* .media-player--wrapper .player-audio {
     width: 25%;
     padding: 0 .5rem;
-}
+} */
 
 .media-player--wrapper .player-controls {
     width: 50%;
@@ -41,6 +41,7 @@
 
 .media-player--wrapper .artist .artist-inside {
     display: flex;
+    align-items: center;
     gap: .5rem
 }
 
@@ -97,7 +98,8 @@
     display: flex;
     justify-content: center;
     align-self: center;
-    gap: .5rem
+    gap: 16px;
+    margin-bottom: 8px;
 }
 
 .media-player--wrapper .player-controls-inside .buttons-media .btn {
@@ -125,7 +127,7 @@
 
 .media-player--wrapper .player-controls-inside .media-linetime .time-progress {
     background-color: var(--color-2);
-    height: 2px;
+    height: 4px;
     width: 100%;
     left: 0;
     position: absolute;
@@ -135,7 +137,7 @@
 .media-player--wrapper .player-controls-inside .media-linetime .time-progress-live {
     background-color: var(--color-4);
     width: 0%;
-    height: 2px;
+    height: 4px;
     transition: all ease var(--animation-1);
     position: absolute;
 }
@@ -150,5 +152,157 @@
     background-color: transparent;
     border: 0;
     color: var(--color-4);
-    font-size: var(--font-size-2);
+}
+
+.button-next {
+    color: var(--color-6);
+    display: flex;
+    position: relative;
+    align-items: center;
+    background: transparent;
+    border: none;
+    justify-content: center;
+}
+
+.fill-properties {
+    fill: currentcolor;
+    width: 16px;
+    height: 16px;
+}
+
+.play-pause {
+    background-color: var(--color-4);
+    border: none;
+    border-radius: 32px;
+    height: 32px;
+    min-width: 32px;
+    color: var(--color-5);
+    display: flex;
+    position: relative;
+    transition: none 33ms cubic-bezier(.3, 0, .7, 1);
+    transition-property: all;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-controls-left,
+.player-controls-right {
+    display: flex;
+    flex: 1;
+    gap: 8px;
+}
+
+.other-buttons {
+    color: var(--color-6);
+    display: flex;
+    height: 32px;
+    min-width: 32px;
+    position: relative;
+    width: 32px;
+    align-items: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.container-other-buttons {
+    justify-content: flex-end;
+}
+
+.container-other-button {
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 25%;
+    display: flex;
+}
+
+.container-other-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+    padding: 5%;
+}
+
+.control-button {
+    background-color: transparent;
+    border: none;
+    color: var(--color-6);
+    height: 32px;
+    position: relative;
+    width: 32px;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.control-button {
+    background-color: transparent;
+    border: none;
+    height: 32px;
+    width: 32px;
+}
+
+.link-device {
+    cursor: pointer;
+    padding: 8px 0;
+}
+
+.volume-change {
+    width: 60px;
+}
+
+.volume-change-input {
+    height: 12px;
+    position: relative;
+    width: 100%;
+}
+
+.hidden-visually {
+    border: 0;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    clip: rect(0 0 0 0);
+}
+
+.progress-bar {
+    height: 100%;
+    overflow: hidden;
+    -ms-touch-action: none;
+    touch-action: none;
+    width: 100%;
+}
+
+.progress-bar-background,
+.progress-bar-background.div {
+    border-radius: calc((4px) / 2);
+    height: 4px;
+    width: 100%;
+}
+
+.progress-bar-background {
+    background-color: var(--color-6);
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.volume-bar {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 1 125px;
 }

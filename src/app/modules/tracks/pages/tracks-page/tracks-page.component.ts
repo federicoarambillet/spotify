@@ -41,13 +41,12 @@ export class TracksPageComponent implements OnInit, OnDestroy {
 
 
   ngOnInit(): void {
-    this.loadDataAll() //TODO 📌📌
-    this.loadDataRandom() //TODO 📌📌
+    this.loadDataAll()
+    this.loadDataRandom()
   }
 
   async loadDataAll(): Promise<any> {
     this.tracksTrending = await this.trackService.getAllTracks$().toPromise()
-
   }
 
   loadDataRandom(): void {
@@ -58,7 +57,7 @@ export class TracksPageComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    // this.listObservers$.forEach(u => u.unsubscribe());
+    this.listObservers$.forEach(u => u.unsubscribe());
   }
 
 

@@ -1,8 +1,6 @@
 import { EventEmitter, Injectable, effect, signal } from '@angular/core';
 import { TrackModel } from '@core/models/tracks.model';
 
-import { BehaviorSubject } from 'rxjs';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -36,25 +34,29 @@ export class MultimediaService {
   }
 
   private listenAllEvents(): void {
-
-    this.audio.addEventListener('timeupdate', this.calculateTime, false);
-    this.audio.addEventListener('playing', this.setPlayerStatus, false);
-    this.audio.addEventListener('play', this.setPlayerStatus, false);
-    this.audio.addEventListener('pause', this.setPlayerStatus, false);
-    this.audio.addEventListener('ended', this.setPlayerStatus, false);
+    this.audio?.addEventListener('timeupdate', this.calculateTime, false);
+    this.audio?.addEventListener('playing', this.setPlayerStatus, false);
+    this.audio?.addEventListener('play', this.setPlayerStatus, false);
+    this.audio?.addEventListener('pause', this.setPlayerStatus, false);
+    this.audio?.addEventListener('ended', this.setPlayerStatus, false);
 
   }
 
-  private statusMap: any = {
-    'play': 'play',
-    'playing': 'playing',
-    'ended': 'ended'
-  };
-
-  private setPlayerStatus = (playerState: any) => {
-    const status = this.statusMap[playerState.status] || 'paused';
-
-    this.playerStatusSignal.set(status);
+  private setPlayerStatus = (state: any) => {
+    switch (state.type) {
+      case 'play':
+        this.playerStatusSignal.set('play')
+        break
+      case 'playing':
+        this.playerStatusSignal.set('playing')
+        break
+      case 'ended':
+        this.playerStatusSignal.set('ended')
+        break
+      default:
+        this.playerStatusSignal.set('paused')
+        break;
+    }
   }
 
   private calculateTime = () => {
@@ -71,7 +73,6 @@ export class MultimediaService {
     let percentage = (currentTime * 100) / duration;
     this.playerPercentageSignal.set(percentage);
   }
-
 
   private setTimeElapsed(currentTime: number): void {
     let seconds = Math.floor(currentTime % 60)
@@ -93,21 +94,23 @@ export class MultimediaService {
     this.timeRemainingSignal.set(displayFormat)
   }
 
-
   public setAudio(track: TrackModel): void {
     this.audio.src = track.url
-    this.audio.play()
+    if (track.url) {
+      this.audio.play()
+    }
   }
 
   public togglePlayer(): void {
-    (this.audio.paused) ? this.audio.play() : this.audio.pause()
+    if (this.audio.src) {
+      (this.audio.paused) ? this.audio.play() : this.audio.pause()
+    }
   }
 
   public seekAudio(percentage: number): void {
     const { duration } = this.audio
     const percentageToSecond = (percentage * duration) / 100
     this.audio.currentTime = percentageToSecond
-
   }
 
 }

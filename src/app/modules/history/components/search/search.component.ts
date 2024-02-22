@@ -6,7 +6,9 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrl: './search.component.css'
 })
 export class SearchComponent implements OnInit {
-  @Output() callBackData: EventEmitter<any> = new EventEmitter();
+
+  @Output() callbackData = new EventEmitter<string>();
+
   public src: string = '';
 
   constructor() {
@@ -17,9 +19,10 @@ export class SearchComponent implements OnInit {
 
   }
 
-  callSearch(term: string | Event): void {
+  callSearch(term: string): void {
+    // console.log(term)
     if (term.toString().length >= 3) {
-      this.callBackData.emit(term);
+      this.callbackData.emit(term);
     }
   }
 
