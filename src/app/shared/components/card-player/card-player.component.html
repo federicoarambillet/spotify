@@ -1,20 +1,24 @@
-<!-- Diseño del mode (small)-->
+<!-- mode (small)-->
 <div *ngIf="mode==='small'" class="card-player player-small">
     <img appImgBroken [src]="track.cover" [alt]="track.name" class="cover">
     <div class="content-player">
         {{track.name}}
     </div>
     <div class="buttons-player">
-        <button  (click)="sendPlay(track)" *ngIf="true" class="play-btn">
-            <i class="uil " [ngClass]="{'uil-play':true}"></i>
-        </button>
-        <button *ngIf="false" class="play-btn">
-            <i class="uil uil-play"></i>
+        <button (click)="sendPlay(track)" *ngIf="true" class="play-btn">
+            <!-- <i class="uil " [ngClass]="{'uil-play':true}"></i> -->
+            <span class="play">
+                <svg role="img" aria-hidden="true" viewBox="0 0 24 24">
+                    <path
+                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z">
+                    </path>
+                </svg>
+            </span>
         </button>
     </div>
 </div>
 
-<!-- Diseño del mode (big)-->
+<!-- mode (big)-->
 <div *ngIf="mode==='big'" class="card-player player-big">
 
     <img appImgBroken [src]="track.cover" alt="" class="cover">
@@ -25,10 +29,14 @@
     </div>
     <div class="buttons-player">
         <button (click)="sendPlay(track)" *ngIf="true" class="play-btn">
-            <i class="uil " [ngClass]="{'uil-play':true}"></i>
-        </button>
-        <button *ngIf="false" class="play-btn">
-            <i class="uil uil-play"></i>
+            <!-- <i class="uil " [ngClass]="{'uil-play':true}"></i> -->
+            <span class="play">
+                <svg role="img" aria-hidden="true" viewBox="0 0 24 24">
+                    <path
+                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z">
+                    </path>
+                </svg>
+            </span>
         </button>
     </div>
 </div>

@@ -1,5 +1,7 @@
 import { EventEmitter, Injectable, effect, signal } from '@angular/core';
 import { TrackModel } from '@core/models/tracks.model';
+import { CookieService } from 'ngx-cookie-service';
+
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +20,7 @@ export class MultimediaService {
   public playerStatusSignal = signal<string>('paused');
   public playerPercentageSignal = signal<number>(0);
 
-  constructor() {
+  constructor(private cookieService: CookieService) {
 
     if (this.isAudioSupported()) {
       this.audio = new Audio();
@@ -34,6 +36,7 @@ export class MultimediaService {
     this.listenAllEvents();
 
   }
+
 
   private isAudioSupported(): boolean {
     return typeof Audio !== 'undefined';
@@ -107,7 +110,7 @@ export class MultimediaService {
   public setAudio(track: TrackModel): void {
     if (this.audio) {
       this.audio.src = track.url
-      if (track.url) {
+      if (track.url && this.cookieService.check('token')) {
         this.audio.play()
       }
     }

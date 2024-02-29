@@ -1,5 +1,6 @@
 .card-player {
-    background-color: var(--color-2);
+    background-color: #1f1e1e;
+
     height: 5rem;
     border-radius: var(--border-radius-1);
     display: flex;
@@ -50,6 +51,16 @@
     background-color: var(--color-1);
     width: 45px;
     height: 45px;
+
+    color: var(--color-4);
+    border: 0;
+    /* font-size: 1.15rem; */
+
+    /* width: 45px;*/
+    display: flex;
+    align-items: center;
+    height: 45px;
+    justify-content: center;
 }
 
 .card-player.player-big {
@@ -81,4 +92,15 @@
     position: absolute;
     right: 0;
     top: 13rem
+}
+
+.play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+}
+
+.play-btn:hover {
+    width: 35px;
 }

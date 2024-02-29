@@ -3,7 +3,7 @@
     --color-2: #242424;
     --color-3: #000000;
     --color-4: #FFFFFF;
-    --color-5: #121212;
+    --color-5: #181818;
     --color-6: #a7a7a7;
     --font-size-1: 1rem;
     --font-size-2: 1.2rem;
@@ -47,4 +47,30 @@ button:disabled {
 
 .text-size-smaller {
     font-size: 0.902rem;
+}
+
+/* Styles for the vertical bar */
+
+/* Bar width */
+::-webkit-scrollbar {
+    width: 14px;
+    /* height: 14px; */
+}
+
+/* Styles for the track (the rail the bar moves on) */
+::-webkit-scrollbar-track {
+    background: transparent;
+    /* Background color of the track */
+}
+
+/* Styles for the thumb (the slider) */
+::-webkit-scrollbar-thumb {
+    background: rgba(71, 70, 70, 0.7);
+    /* Thumb color dark and half-transparent */
+}
+
+/* Styles for the thumb when hovering the mouse over it */
+::-webkit-scrollbar-thumb:hover {
+    background: #525151;
+    /* Thumb color when hovering */
 }

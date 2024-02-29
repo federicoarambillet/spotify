@@ -1,15 +1,16 @@
 .section--generic {
     margin-bottom: 2rem;
+    background-color: transparent;
 }
 
-.section--generic h2{
+.section--generic h2 {
     font-size: 1.5rem;
     font-weight: 700;
 }
 
-.section--generic h2:hover{
-  text-decoration: underline;
-  cursor: pointer;
+.section--generic h2:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .section--generic__player--zone .player--list {
@@ -27,4 +28,25 @@
 .section--generic__player--zone .player--list.card-big {
     grid-template-columns: repeat(5, minmax(80px, 1fr));
     margin-bottom: 8%;
+}
+
+.section--generic__player--zone .player--list.card-limit {
+    grid-template-columns: repeat(5, 1fr);
+    margin-bottom: 8%;
+}
+
+.section--generic .container-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section--generic .show-all {
+    font-weight: 500;
+    cursor: pointer;
+    color: #b3b3b3;
+}
+
+.section--generic .show-all:hover {
+    text-decoration: underline;
 }
