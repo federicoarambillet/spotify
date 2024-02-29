@@ -7,7 +7,7 @@
 
 .home-wrapper {
     margin: 0 0 0 0.5rem;
-    width: 75%;
+    width: 80%;
     /* background: rgb(23, 23, 26); */
     background: linear-gradient(90deg, rgba(23, 23, 26, 1) 44%, rgba(24, 24, 24, 1));
     /* min-width: 100vh; */
@@ -16,6 +16,6 @@
 }
 
 .app-side-bar {
-    width: 25%;
+    width: 20%;
     /* height: 100vh; */
 }

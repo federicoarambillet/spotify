@@ -6,4 +6,11 @@
         <router-outlet name="child"></router-outlet>
     </div>
 </div>
-<app-media-player></app-media-player>
+
+<div *ngIf="token; else preview">
+    <app-media-player></app-media-player>
+</div>
+
+<ng-template #preview>
+    <app-banner-preview></app-banner-preview>
+</ng-template>

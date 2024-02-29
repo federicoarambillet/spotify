@@ -13,6 +13,9 @@ import { PlayListBodyComponent } from './components/play-list-body/play-list-bod
 import { PlayListHeaderComponent } from './components/play-list-header/play-list-header.component';
 import { OrderListPipe } from './pipe/order-list.pipe';
 import { ImgBrokenDirective } from './directives/img-broken.directive';
+import { BannerPreviewComponent } from './components/banner-preview/banner-preview.component';
+import { ButtonMainComponent } from './components/button-main/button-main.component';
+import { NavComponent } from './components/nav/nav.component';
 
 
 @NgModule({
@@ -27,7 +30,10 @@ import { ImgBrokenDirective } from './directives/img-broken.directive';
     PlayListBodyComponent,
     PlayListHeaderComponent,
     OrderListPipe,
-    ImgBrokenDirective
+    ImgBrokenDirective,
+    BannerPreviewComponent,
+    ButtonMainComponent,
+    NavComponent
   ],
   imports: [
     CommonModule,
@@ -43,7 +49,10 @@ import { ImgBrokenDirective } from './directives/img-broken.directive';
     PlayListBodyComponent,
     PlayListHeaderComponent,
     OrderListPipe,
-    ImgBrokenDirective
+    ImgBrokenDirective,
+    BannerPreviewComponent,
+    ButtonMainComponent,
+    NavComponent
   ]
 })
 export class SharedModule { }

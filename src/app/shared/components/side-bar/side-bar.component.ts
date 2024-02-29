@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-side-bar',
@@ -7,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrl: './side-bar.component.css'
 })
 export class SideBarComponent implements OnInit {
+  @Input() token: boolean = false;
 
   public mainMenu: {
     defaultOptions: Array<any>,
@@ -18,9 +20,11 @@ export class SideBarComponent implements OnInit {
 
   customOptions: Array<any> = [];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private cookieService: CookieService) { }
 
   ngOnInit(): void {
+    this.token = this.cookieService.check('token');
+
     this.mainMenu.defaultOptions = [
       {
         name: 'Home',
@@ -88,6 +92,10 @@ export class SideBarComponent implements OnInit {
   }
 
   goTo($event: any): void {
-    this.router.navigate(['/', 'favorites']);
+    if (this.cookieService.check('token')) {
+      this.router.navigate(['/', 'favorites']);
+    } else {
+      this.router.navigate(['/auth/login']);
+    }
   }
 }

@@ -1,0 +1,72 @@
+.banner-preview {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.banner-preview>div {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    padding: 10px 28px 10px 28px;
+}
+
+.banner-preview>div p {
+    margin: 0;
+}
+
+.banner-preview>div {
+    background-image: linear-gradient(90deg, #af2896, #509bf5);
+}
+
+.title-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    color: var(--color-4);
+}
+
+.container-button {
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: transparent;
+    border: 0px;
+    border-radius: 9999px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    touch-action: manipulation;
+    transition-duration: 33ms;
+    transition-property: background-color, border-color, color, box-shadow, filter, transform;
+    user-select: none;
+    vertical-align: middle;
+    transform: translate3d(0px, 0px, 0px);
+    padding: 0px;
+    min-inline-size: 0px;
+    align-self: center;
+}
+
+.container-button>span {
+    box-sizing: border-box;
+    position: relative;
+    background-color: var(--color-4);
+    color: var(--color-3);
+    display: flex;
+    border-radius: 9999px;
+    font-size: inherit;
+    min-block-size: 48px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding-block-start: 8px;
+    padding-block-end: 8px;
+    padding-inline-start: 32px;
+    padding-inline-end: 32px;
+}

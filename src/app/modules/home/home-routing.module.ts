@@ -16,6 +16,10 @@ const routes: Routes = [
     loadChildren: () => import('@modules/history/history.module').then(m => m.HistoryModule)
   },
   {
+    path: 'offline',
+    loadChildren: () => import('@modules/offline/offline.module').then(m => m.OfflineModule)
+  },
+  {
     path: '**',//TODO 404 cuando no existe la ruta
     redirectTo: '/tracks'
   }
@@ -25,4 +29,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
+
 export class HomeRoutingModule { }

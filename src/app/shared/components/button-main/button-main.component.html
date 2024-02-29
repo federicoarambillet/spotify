@@ -1,0 +1,11 @@
+<div *ngIf="mode == 'big'; else buttonsmall">
+    <button class="container-button">
+        <span (click)="redirectTo()">{{title}}</span>
+    </button>
+</div>
+
+<ng-template #buttonsmall>
+    <button class="button-primary">
+        <span (click)="redirectTo()">{{title}}</span>
+    </button>
+</ng-template>

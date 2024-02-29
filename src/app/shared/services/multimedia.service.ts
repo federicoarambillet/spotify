@@ -8,7 +8,7 @@ import { TrackModel } from '@core/models/tracks.model';
 export class MultimediaService {
 
   callback: EventEmitter<any> = new EventEmitter<any>();
-  public audio!: HTMLAudioElement;//<audio>
+  private audio?: HTMLAudioElement;
 
   public trackInfoSignal = signal<TrackModel | undefined>(undefined);
 
@@ -20,7 +20,9 @@ export class MultimediaService {
 
   constructor() {
 
-    this.audio = new Audio();
+    if (this.isAudioSupported()) {
+      this.audio = new Audio();
+    }
 
     effect(() => {
       const dataInfo = this.trackInfoSignal();
@@ -31,6 +33,10 @@ export class MultimediaService {
 
     this.listenAllEvents();
 
+  }
+
+  private isAudioSupported(): boolean {
+    return typeof Audio !== 'undefined';
   }
 
   private listenAllEvents(): void {
@@ -60,10 +66,14 @@ export class MultimediaService {
   }
 
   private calculateTime = () => {
-    const { duration, currentTime } = this.audio;
-    this.setTimeElapsed(currentTime);
-    this.setRemaining(currentTime, duration);
-    this.setPercentage(currentTime, duration);
+    if (this.audio) {
+      const { duration, currentTime } = this.audio;
+      this.setTimeElapsed(currentTime);
+      this.setRemaining(currentTime, duration);
+      this.setPercentage(currentTime, duration);
+    } else {
+      console.error('Audio element is not initialized.');
+    }
   }
 
   private setPercentage(currentTime: number, duration: number): void {
@@ -95,22 +105,28 @@ export class MultimediaService {
   }
 
   public setAudio(track: TrackModel): void {
-    this.audio.src = track.url
-    if (track.url) {
-      this.audio.play()
+    if (this.audio) {
+      this.audio.src = track.url
+      if (track.url) {
+        this.audio.play()
+      }
     }
   }
 
   public togglePlayer(): void {
-    if (this.audio.src) {
-      (this.audio.paused) ? this.audio.play() : this.audio.pause()
+    if (this.audio) {
+      if (this.audio.src) {
+        (this.audio.paused) ? this.audio.play() : this.audio.pause()
+      }
     }
   }
 
   public seekAudio(percentage: number): void {
-    const { duration } = this.audio
-    const percentageToSecond = (percentage * duration) / 100
-    this.audio.currentTime = percentageToSecond
+    if (this.audio) {
+      const { duration } = this.audio
+      const percentageToSecond = (percentage * duration) / 100
+      this.audio.currentTime = percentageToSecond
+    }
   }
 
 }

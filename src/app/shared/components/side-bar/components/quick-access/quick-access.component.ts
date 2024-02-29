@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './quick-access.component.html',
   styleUrl: './quick-access.component.css'
 })
+
 export class QuickAccessComponent implements OnInit {
 
   public defaultOption: Array<any> = [];

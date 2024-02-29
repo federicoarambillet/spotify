@@ -3,7 +3,7 @@
         <!-- <div><i class="uil uil-ellipsis-h"></i></div> -->
         <ul class="side-bar-link">
             <app-logo></app-logo>
-            <li [routerLink]="item.router" *ngFor="let item of mainMenu.defaultOptions">
+            <li [routerLink]="token ? item.router: '/auth/login'" *ngFor="let item of mainMenu.defaultOptions">
                 <div class="list-wrapper-item">
                     <span [ngClass]="['uil',item.icon]">{{item.name}}</span>
                     <span class="side-bar-link list-label">{{item.name}}</span>

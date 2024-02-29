@@ -88,6 +88,8 @@
 
 /* About */
 .side-about {
+    margin: 45px 0;
+    /* padding: 0 24px; */
     display: flex;
     flex-wrap: wrap;
     text-decoration: none;
@@ -95,7 +97,8 @@
     border: none;
     padding: 0px;
     color: var(--text-subdued, #6a6a6a);
-    padding: 2px 20px;
+    text-align: start;
+    /* padding: 2px 20px; */
 }
 
 .side-about div span {
@@ -127,7 +130,7 @@
 
 .button-language {
     box-sizing: border-box;
-    font-size: 0.8125rem;
+    font-size: 0.9rem;
     font-weight: 700;
     background-color: transparent;
     border-radius: 9999px;

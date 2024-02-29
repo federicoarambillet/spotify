@@ -19,16 +19,7 @@
     flex-direction: column;
 }
 
-.button-primary {
-    background-color: var(--color-4);
-    box-sizing: border-box;
-    font-weight: 700;
-    border: 0px;
-    border-radius: 9999px;
-    padding: 5px 20px;
-}
-
-.button-primary span:hover {
-    outline: none;
-    font-size: 0.875rem;
+.container-article-general {
+    overflow-y: auto;
+    height: 20vh;
 }
