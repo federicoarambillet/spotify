@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { TrackModel } from '@core/models/tracks.model';
-// import * as dataRaw from '../../../data/tracks.json';
 import { environment } from './../../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { map, catchError } from 'rxjs/operators';
+
+import * as dataRaw from '../../../data/playlists.json';
 
 
 
@@ -13,7 +14,8 @@ import { map, catchError } from 'rxjs/operators';
 })
 export class TrackService {
 
-  // dataTracksTrending$: Observable<TrackModel[]> = of([]);
+  dataPlayLists$: Observable<TrackModel[]> = of([]);
+
   // dataTracksRandom$: Observable<any> = of([]);
 
   // constructor() {
@@ -39,6 +41,13 @@ export class TrackService {
 
   constructor(private http: HttpClient) {
 
+    const { data }: any = (dataRaw as any).default;
+    this.dataPlayLists$ = of(data);
+
+  }
+
+  getAllPlaylist$(): Observable<any> {
+    return this.dataPlayLists$;
   }
 
   getAllTracks$(): Observable<any> {

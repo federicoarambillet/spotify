@@ -1,0 +1,119 @@
+footer {
+    background-color: var(--color-5-rgb);
+    padding: 8px 16px 40px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.social-links {
+    display: flex;
+    margin-top: 32px;
+    padding-top: 40px;
+}
+
+.container-link-networks {
+    display: inline;
+    padding-right: 16px;
+}
+
+.container-link-networks a {
+    fill: var(--color-4);
+}
+
+.about-me {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.container-link-about {
+    margin-bottom: 32px;
+    margin-right: 24px;
+}
+
+.ul-link {
+    box-sizing: border-box;
+    padding-inline: 0px;
+    margin-block: 0px;
+    overflow-wrap: break-word;
+    list-style-type: none;
+    flex-direction: column;
+    display: flex;
+}
+
+.container-link-about p {
+    color: var(--color-4-rbg);
+}
+
+.button-networks {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(41, 41, 41);
+}
+
+.button-networks:hover {
+    background-color: rgb(112, 110, 110);
+}
+
+.title-about {
+    box-sizing: border-box;
+    margin-block: 0px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: inherit;
+}
+
+.footer-links,
+.divider {
+    box-sizing: border-box;
+    --decorative-subdued: #292929;
+    border: 0px;
+    border-block-start: 1px solid var(--decorative-subdued, #dedede);
+    margin-block-end: 24px;
+    margin-block-start: 24px;
+}
+
+.container-link-about p {
+    color: rgb(255, 255, 255);
+}
+
+.container-link-about {
+    width: 20%;
+}
+
+.a-link {
+    margin: 8px 0px;
+    width: fit-content;
+}
+
+.a-link:hover {
+    text-decoration: underline;
+}
+
+.about-me {
+    flex: 1 1 50%;
+    padding-bottom: 0px;
+}
+
+.span-about {
+    box-sizing: border-box;
+    margin-block: 0px;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-block-end: 8px;
+    color: inherit;
+}
+
+.copy {
+    padding-right: 16px;
+    color: var(--text-subdued, #6a6a6a);
+}
+
+.about-me {
+    flex-direction: row;
+}

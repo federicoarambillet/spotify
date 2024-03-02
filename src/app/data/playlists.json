@@ -1,0 +1,34 @@
+{
+    "data": [
+        {
+            "_id": 1,
+            "name": "Dinner with Friends",
+            "description": "The perfect soundtrack to those long nights over dinner.",
+            "cover": "https://i.scdn.co/image/ab67706f000000026e515187c071e45918e9f0de"
+        },
+        {
+            "_id": 2,
+            "name": "Dinner Jazz",
+            "description": "The gentle sound of some of the greatest voices and instrumentalists in Jazz.",
+            "cover": "https://i.scdn.co/image/ab67706f00000002a98e80d2fc9b1cf3b80c4481"
+        },
+        {
+            "_id": 3,
+            "name": "Dinner Lounge",
+            "description": "Soft electronic music for your dinner.",
+            "cover": "https://i.scdn.co/image/ab67706f000000027cd703bbfec2f1e86c879bec"
+        },
+        {
+            "_id": 4,
+            "name": "Feel Good Dinner",
+            "description": "An uplifting yet tasteful dinner playlist with a guaranteed feel good vibe.",
+            "cover": "https://i.scdn.co/image/ab67706f000000022ba865eb4204be02ce3e8e09"
+        },
+        {
+            "_id": 5,
+            "name": "Chillout Lounge",
+            "description": "Just lean back and enjoy relaxed beats.",
+            "cover": "https://i.scdn.co/image/ab67706f00000002dec17246891b5b4eb97bdb0d"
+        }
+    ]
+}

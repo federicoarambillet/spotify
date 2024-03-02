@@ -11,12 +11,12 @@ import { SectionGenericComponent } from './components/section-generic/section-ge
 import { CardPlayerComponent } from './components/card-player/card-player.component';
 import { PlayListBodyComponent } from './components/play-list-body/play-list-body.component';
 import { PlayListHeaderComponent } from './components/play-list-header/play-list-header.component';
-import { OrderListPipe } from './pipe/order-list.pipe';
-import { ImgBrokenDirective } from './directives/img-broken.directive';
 import { BannerPreviewComponent } from './components/banner-preview/banner-preview.component';
 import { ButtonMainComponent } from './components/button-main/button-main.component';
 import { NavComponent } from './components/nav/nav.component';
-
+import { FooterComponent } from './components/footer/footer.component';
+import { ImgBrokenDirective } from './directives/img-broken.directive';
+import { OrderListPipe } from './pipe/order-list.pipe';
 
 @NgModule({
   declarations: [
@@ -33,12 +33,15 @@ import { NavComponent } from './components/nav/nav.component';
     ImgBrokenDirective,
     BannerPreviewComponent,
     ButtonMainComponent,
-    NavComponent
+    NavComponent,
+    FooterComponent
   ],
+
   imports: [
     CommonModule,
     RouterModule
   ],
+
   exports: [
     SideBarComponent,
     MediaPlayerComponent,
@@ -52,7 +55,9 @@ import { NavComponent } from './components/nav/nav.component';
     ImgBrokenDirective,
     BannerPreviewComponent,
     ButtonMainComponent,
-    NavComponent
+    NavComponent,
+    FooterComponent
   ]
 })
+
 export class SharedModule { }

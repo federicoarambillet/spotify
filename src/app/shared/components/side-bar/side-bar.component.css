@@ -1,12 +1,13 @@
 /* General */
-.side-bar {
-    /* min-width: 19rem; */
-    /* position: fixed; */
-    /* top: 0;
-    left: 0; */
+/*.side-bar {
+  min-width: 19rem; */
+/* position: fixed; */
+/* top: 0;
+    left: 0; 
     
     height: 100vh;
 }
+*/
 
 .side-bar-separator {
     margin: 0.5rem 0;
@@ -17,9 +18,10 @@
 } */
 
 /* Main */
+/*
 .container-side-bar-link {
-    height: 100vh;
-}
+     height: 100vh; 
+}*/
 
 .side-bar-link {
     list-style: none;
@@ -113,7 +115,7 @@
 /* Language */
 .about-link-container {
     margin: 22px 0 22px 0;
-    padding: 0 24px;
+    padding: 0px 24px 0px 10px;
 }
 
 .about-link-container .container-span-svg {
@@ -159,4 +161,8 @@
 .button-language:hover {
     outline: none;
     font-size: 0.875rem;
+}
+
+.container-side-bar-link {
+    min-height: 440px;
 }

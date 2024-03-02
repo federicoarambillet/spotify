@@ -1,16 +1,16 @@
 .container-home {
     display: flex;
-    margin: 0.3rem;
+    margin: 0.5rem;
 }
 
 .home-wrapper {
     margin: 0 0 0 0.5rem;
-    width: 80%;
+    width: 79%;
     background-color: var(--color-5);
-    height: 100vh;
+    /* height: 100vh; */
     border-radius: 8px;
 }
 
 .app-side-bar {
-    width: 20%;
+    width: 21%;
 }

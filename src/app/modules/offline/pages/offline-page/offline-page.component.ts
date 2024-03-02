@@ -9,16 +9,17 @@ import { TrackService } from '@modules/tracks/services/track.service';
 })
 
 export class OfflinePageComponent {
+
   tracksTrending: Array<TrackModel> = [];
 
   constructor(private trackService: TrackService) { }
 
   ngOnInit(): void {
-    this.loadDataAll()
+    this.loadDataAll();
   }
 
   async loadDataAll(): Promise<any> {
-    this.tracksTrending = await this.trackService.getAllTracks$().toPromise()
+    this.tracksTrending = await this.trackService.getAllPlaylist$().toPromise();
   }
 
 }

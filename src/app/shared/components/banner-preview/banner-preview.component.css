@@ -1,15 +1,16 @@
 .banner-preview {
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 99%;
     z-index: 2;
+    padding: 0.4rem;
 }
 
 .banner-preview>div {
     position: relative;
     display: flex;
     justify-content: space-between;
-    height: 100%;
+    /* height: 100%; */
     padding: 10px 28px 10px 28px;
 }
 

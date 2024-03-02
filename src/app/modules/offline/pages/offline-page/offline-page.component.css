@@ -1,9 +1,12 @@
-/* .offline-page { */
-    /* padding: 1rem;  */
-/* } */
+.offline-page {
+    overflow-y: auto;
+    height: 541px;
+    border-bottom-left-radius: 8px;
+    background-color: rgb(18, 18, 18);
+}
 
 .contentSpacing {
     margin: 0;
     max-width: 1955px;
-    padding: 0  1rem;
+    padding: 0 1rem;
 }

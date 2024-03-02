@@ -3,7 +3,9 @@
     --color-2: #242424;
     --color-3: #000000;
     --color-4: #FFFFFF;
+    --color-4-rgb: #FFFFFF;
     --color-5: #181818;
+    --color-5-rgb: rgb(18, 18, 18);
     --color-6: #a7a7a7;
     --font-size-1: 1rem;
     --font-size-2: 1.2rem;
@@ -24,7 +26,7 @@ body {
     font-family: var(--font-family-1);
     font-size: var(--font-size-1);
     color: var(--color-4);
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 input,
@@ -48,6 +50,13 @@ button:disabled {
 .text-size-smaller {
     font-size: 0.902rem;
 }
+
+a {
+    text-decoration: none;
+    color: var(--color-6);
+}
+
+
 
 /* Styles for the vertical bar */
 
