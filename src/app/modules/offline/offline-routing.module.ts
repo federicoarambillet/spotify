@@ -6,7 +6,7 @@ const routes: Routes = [
   {
     path: '',
     component: OfflinePageComponent,
-    outlet: 'child'
+    // outlet: 'child'
   }
 ];
 

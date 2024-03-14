@@ -6,12 +6,11 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class SessionGuard {
+export class SessionGuard  {
 
   constructor(
     private cookieService: CookieService,
     private router: Router) {
-
   }
 
   canActivate(
@@ -25,7 +24,7 @@ export class SessionGuard {
 
       const token: boolean = this.cookieService.check('token')
       if (!token) {
-        this.router.navigate(['/auth/login', 'auth'])
+        this.router.navigate(['/', 'offline'])
       }
       return token
 

@@ -5,38 +5,52 @@
         {{track.name}}
     </div>
     <div class="buttons-player">
-        <button (click)="sendPlay(track)" *ngIf="true" class="play-btn">
-            <!-- <i class="uil " [ngClass]="{'uil-play':true}"></i> -->
-            <span class="play">
-                <svg role="img" aria-hidden="true" viewBox="0 0 24 24">
-                    <path
-                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z">
-                    </path>
-                </svg>
-            </span>
-        </button>
+
+        <div *ngIf="token; else btnlogin">
+            <button (click)="sendPlay(track)" class="play-btn">
+                <!-- <i class="uil " [ngClass]="{'uil-play':true}"></i> -->
+                <span class="play">
+                    <svg role="img" aria-hidden="true" viewBox="0 0 24 24">
+                        <path
+                            d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z">
+                        </path>
+                    </svg>
+                </span>
+            </button>
+        </div>
+
     </div>
 </div>
 
 <!-- mode (big)-->
 <div *ngIf="mode==='big'" class="card-player player-big">
-
-    <img appImgBroken [src]="track.cover" alt="" class="cover">
+    <div class="container-img">
+        <img appImgBroken [src]="track.cover" [alt]="track.name">
+    </div>
 
     <div class="content-player">
         <div class="title-track">{{track.name}}</div>
         <div class="sub-title-track">{{track.name ? track.description :''}}</div>
     </div>
     <div class="buttons-player">
-        <button (click)="sendPlay(track)" *ngIf="true" class="play-btn">
-            <!-- <i class="uil " [ngClass]="{'uil-play':true}"></i> -->
-            <span class="play">
-                <svg role="img" aria-hidden="true" viewBox="0 0 24 24">
-                    <path
-                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z">
-                    </path>
-                </svg>
-            </span>
-        </button>
+
+        <div *ngIf="token; else btnlogin">
+            <button (click)="sendPlay(track)" class="play-btn">
+                <!-- <i class="uil " [ngClass]="{'uil-play':true}"></i> -->
+                <span class="play">
+                    <svg role="img" aria-hidden="true" viewBox="0 0 24 24">
+                        <path
+                            d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z">
+                        </path>
+                    </svg>
+                </span>
+            </button>
+        </div>
+
     </div>
 </div>
+
+
+<ng-template #btnlogin>
+    <app-button-modal-log-in [track]="track"></app-button-modal-log-in>
+</ng-template>

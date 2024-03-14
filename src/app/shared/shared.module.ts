@@ -17,6 +17,9 @@ import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ImgBrokenDirective } from './directives/img-broken.directive';
 import { OrderListPipe } from './pipe/order-list.pipe';
+import { ModalLogInComponent } from './components/modal-log-in/modal-log-in.component';
+import { ButtonModalLogInComponent } from './components/button-modal-log-in/button-modal-log-in.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -34,12 +37,16 @@ import { OrderListPipe } from './pipe/order-list.pipe';
     BannerPreviewComponent,
     ButtonMainComponent,
     NavComponent,
-    FooterComponent
+    FooterComponent,
+    ModalLogInComponent,
+    ButtonModalLogInComponent
+
   ],
 
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MatDialogModule
   ],
 
   exports: [
@@ -56,7 +63,9 @@ import { OrderListPipe } from './pipe/order-list.pipe';
     BannerPreviewComponent,
     ButtonMainComponent,
     NavComponent,
-    FooterComponent
+    FooterComponent,
+    ModalLogInComponent,
+    ButtonModalLogInComponent
   ]
 })
 

@@ -1,0 +1,57 @@
+.card-player .buttons-player {
+    opacity: 0;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    transition: all ease var(--animation-1);
+}
+
+.buttons-player .play-btn {
+    color: var(--color-4);
+    border: 0;
+    font-size: 1.15rem;
+    border-radius: 2rem;
+    background-color: var(--color-1);
+    width: 45px;
+    height: 45px;
+    color: var(--color-4);
+    border: 0;
+    display: flex;
+    align-items: center;
+    height: 45px;
+    justify-content: center;
+}
+
+.card-player:hover .buttons-player {
+    opacity: 1;
+}
+
+.card-player.player-big .content-player .sub-title-track {
+    font-size: 0.875rem;
+    opacity: .7;
+    margin-block: 0px;
+    color: var(#a7a7a7, #6a6a6a);
+}
+
+.card-player.player-big .buttons-player {
+    position: absolute;
+    right: 5px;
+    top: 9rem;
+}
+
+.content-player {
+    min-height: 62px;
+}
+
+.play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+}
+
+.play-btn:hover {
+    width: 35px;
+}

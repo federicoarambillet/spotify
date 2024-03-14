@@ -15,10 +15,15 @@ const routes: Routes = [
     path: 'history',
     loadChildren: () => import('@modules/history/history.module').then(m => m.HistoryModule)
   },
-  {
-    path: 'offline',
-    loadChildren: () => import('@modules/offline/offline.module').then(m => m.OfflineModule)
-  },
+  // {
+  //   path: 'auth',
+  //   //Lazy loading
+  //   loadChildren: () => import('@modules/auth/auth.module').then(m => m.AuthModule)
+  // },
+  // {
+  //   path: 'offline',
+  //   loadChildren: () => import('@modules/offline/offline.module').then(m => m.OfflineModule)
+  // },
   {
     path: '**',//TODO 404 cuando no existe la ruta
     redirectTo: '/tracks'

@@ -9,6 +9,7 @@ import { MultimediaService } from '@shared/services/multimedia.service';
 })
 export class CardPlayerComponent implements OnInit {
   @Input() mode: 'small' | 'big' = 'small';
+  @Input() token: boolean = false;
   // @Input() track!: TrackModel;
   @Input() track: TrackModel = { _id: 0, name: '', album: '', url: '', cover: '' };
 
@@ -20,6 +21,9 @@ export class CardPlayerComponent implements OnInit {
   }
 
   sendPlay(track: TrackModel): void {
-    this.multimediaService.trackInfoSignal.set(track);
+    if (track) {
+      this.multimediaService.trackInfoSignal.set(track);
+    }
   }
+  
 }

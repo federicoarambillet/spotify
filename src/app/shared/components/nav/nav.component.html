@@ -16,8 +16,8 @@
             </svg>
         </button>
     </div>
-    <div *ngIf="!token">
-        <button class="secondary-button">Sign up</button>
-        <app-button-main [mode]="'small'" [title]="'Log in'"></app-button-main>
+    <div class="container-button" *ngIf="!token">
+        <button class="secondary-button" (click)="login()">Sign up</button>
+        <app-button-main [mode]="'big'" [title]="'Log in'" (click)="login()"></app-button-main>
     </div>
 </header>

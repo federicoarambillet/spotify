@@ -1,0 +1,28 @@
+<!-- <h2 mat-dialog-title>Install Angular</h2> -->
+<mat-dialog-content>
+
+    <div class="container-modal">
+        <div>
+            <div class="container-modal-img">
+                <img [src]="data.track.cover" [alt]="data.track.name">
+            </div>
+            <div class="container-links">
+                <h2 class="title">Start listening with a free Spotify account</h2>
+                <button class="button-sing-up"  mat-dialog-close (click)="login()">
+                    <span class="span-button-sign-up">Sign up
+                        free
+                    </span>
+                </button>
+                <div class="container-button-download">
+                    <button mat-dialog-close (click)="login()" class="button-download">Download app
+                    </button>
+                </div>
+                <p class="already-have-an-account">
+                    <span class="text-body-medium-bold">Already have an account?</span>
+                    <a mat-dialog-close (click)="login()" class="button-login">Log in</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</mat-dialog-content>

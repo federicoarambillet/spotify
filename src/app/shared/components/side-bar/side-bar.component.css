@@ -72,7 +72,6 @@
 
 /* Library */
 .svg-library {
-    /* font-size: var(--font-size-3); */
     fill: var(--color-6);
     width: 24px;
     height: 24px;
@@ -91,16 +90,14 @@
 /* About */
 .side-about {
     margin: 45px 0;
-    /* padding: 0 24px; */
     display: flex;
     flex-wrap: wrap;
     text-decoration: none;
     line-height: inherit;
     border: none;
     padding: 0px;
-    color: var(--text-subdued, #6a6a6a);
+    /* color: var(--color-6, #6a6a6a); */
     text-align: start;
-    /* padding: 2px 20px; */
 }
 
 .side-about div span {

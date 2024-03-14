@@ -1,7 +1,16 @@
-<div class="offline-page">
-    <section class="contentSpacing">
-        <app-section-generic [dataTracks]="tracksTrending" [mode]="'big'" [title]="'Spotify Playlists'" [limit]="5">
-        </app-section-generic>
-    </section>
-    <app-footer></app-footer>
+<div class="container-home">
+    <div class="app-side-bar">
+        <app-side-bar></app-side-bar>
+    </div>
+    <div class="offline-page">
+        <app-nav></app-nav>
+        <section class="contentSpacing">
+            <app-section-generic [dataTracks]="tracksTrending" [mode]="'big'" [title]="'Spotify Playlists'" [limit]="5">
+            </app-section-generic>
+        </section>
+        <app-footer></app-footer>
+    </div>
 </div>
+
+
+<app-banner-preview></app-banner-preview>
