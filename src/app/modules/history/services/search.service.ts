@@ -18,10 +18,7 @@ export class SearchService {
   //   )
   // }
 
-  searchTracks$(term: string): Observable<any> {
-    const headers = new HttpHeaders().set('Authorization','Bearer BQCurbmN6AC1mJ2Jjp6m_OABRViJzXOfI2beNVscKi7kgdEhyIkWAqAEbDCQAyc9S-9T-rxpHX_EkBpaCu4_Y03m7vGEt5VEmsDa5-q2MYVAY5lT0E0');
+  // searchTracks$(term: string): Observable<any> {
 
-    return this.http.get(`https://api.spotify.com/v1/browse/new-releases?limit=20`, { headers })
-
-  }
+  // }
 }

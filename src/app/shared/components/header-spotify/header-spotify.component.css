@@ -20,3 +20,8 @@
 .fill {
     fill: white;
 }
+
+button {
+    background-color: transparent;
+    border: none;
+}

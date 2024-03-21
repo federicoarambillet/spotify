@@ -18,6 +18,6 @@ export class HistoryPageComponent implements OnInit {
   receiveData($event: string): void {
     // const searchTerm = ($event.target as HTMLInputElement).value;
 
-    this.listResults$ = this.searchService.searchTracks$($event)
+    // this.listResults$ = this.searchService.searchTracks$($event)
   }
 }
