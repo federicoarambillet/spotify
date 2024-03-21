@@ -1,0 +1,26 @@
+footer {
+    /* background: linear-gradient(rgba(255, 255, 255, 0.1) 0%, rgb(0, 0, 0) 100%); */
+    background-color: #121212;
+
+}
+
+.fnhzy {
+    color: rgb(167, 167, 167);
+    text-align: center;
+    padding: 32px;
+}
+
+.fvwaKF {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    margin-block: 0px;
+    font-size: 0.6875rem;
+    font-weight: 400;
+    font-family: var(--font-family, CircularSp, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif));
+    color: inherit;
+}
+
+.fnhzy a {
+    color: rgb(167, 167, 167);
+    text-decoration: underline;
+}

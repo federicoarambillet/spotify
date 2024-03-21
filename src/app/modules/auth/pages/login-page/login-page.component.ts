@@ -37,13 +37,13 @@ export class LoginPageComponent implements OnInit {
   sendLogin(): void {
     const { email, password } = this.formLogin.value
     this.authService.sendCredentials(email, password)
-      //TODO: 200 <400
+      //200 <400
       .subscribe(responseOk => {
         const { tokenSession, data } = responseOk
         this.cookie.set('token', tokenSession, 4, '/')
         this.router.navigate(['/', 'tracks'])
       },
-        err => {//TODO error 400>=
+        err => {//error 400>=
           this.errorSession = true
         })
 

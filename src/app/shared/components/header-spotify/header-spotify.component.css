@@ -1,0 +1,22 @@
+.container-header-spotify {
+    border-bottom: none;
+    padding: 48px 32px 0px;
+    margin-bottom: 10px;
+    /* width: 100%; */
+    padding: 32px 0px 32px 51px;
+    margin-bottom: 0px;
+}
+
+.spotify-logo {
+    height: 36px;
+    text-align: left;
+}
+
+.spotify-logo {
+    fill: var(--color-3);
+    stroke: transparent;
+}
+
+.fill {
+    fill: white;
+}

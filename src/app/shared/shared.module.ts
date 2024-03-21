@@ -20,6 +20,8 @@ import { OrderListPipe } from './pipe/order-list.pipe';
 import { ModalLogInComponent } from './components/modal-log-in/modal-log-in.component';
 import { ButtonModalLogInComponent } from './components/button-modal-log-in/button-modal-log-in.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { HeaderSpotifyComponent } from './components/header-spotify/header-spotify.component';
+import { FooterSpotifyComponent } from './components/footer-spotify/footer-spotify.component';
 
 @NgModule({
   declarations: [
@@ -39,8 +41,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     NavComponent,
     FooterComponent,
     ModalLogInComponent,
-    ButtonModalLogInComponent
-
+    ButtonModalLogInComponent,
+    HeaderSpotifyComponent,
+    FooterSpotifyComponent
   ],
 
   imports: [
@@ -65,7 +68,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     NavComponent,
     FooterComponent,
     ModalLogInComponent,
-    ButtonModalLogInComponent
+    ButtonModalLogInComponent,
+    HeaderSpotifyComponent,
+    FooterSpotifyComponent
   ]
 })
 
