@@ -18,7 +18,7 @@
 }
 
 .fill {
-    fill: white;
+    fill: var(--color-4);
 }
 
 button {
