@@ -1,0 +1,74 @@
+.container-buttons {
+    padding: 1rem;
+}
+
+.container-buttons {
+    display: flex;
+}
+
+.container-buttons button:hover {
+    opacity: 0.7;
+}
+
+.btn-filter-all:not(:last-child) {
+    margin-inline-end: 8px;
+}
+
+.btn-filter-all {
+    padding: 5rem;
+    font-weight: bold;
+    background-color: var(--color-4);
+    border: 0px;
+    color: var(--color-2);
+    cursor: pointer;
+    line-height: 1;
+    letter-spacing: inherit;
+    padding: 0px;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+
+    min-inline-size: 0px;
+    min-block-size: 32px;
+    padding-block-start: 4px;
+    padding-block-end: 4px;
+    padding-inline-start: 12px;
+    padding-inline-end: 12px;
+}
+
+.presentation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filters-text {
+    box-sizing: border-box;
+    border-radius: 9999px;
+    margin-right: 5%;
+    display: inline-flex;
+    min-inline-size: 0px;
+    min-block-size: 32px;
+    font-weight: bold;
+    align-items: center;
+    padding-block-start: 4px;
+    padding-block-end: 4px;
+    padding-inline-start: 12px;
+    padding-inline-end: 12px;
+    background-color: var(--color-2);
+}
+
+.filters {
+    background-color: transparent;
+    border: 0px;
+    color: var(--color-4);
+    cursor: pointer;
+    line-height: 1;
+    letter-spacing: inherit;
+    padding: 0px;
+    border-radius: 9999px;
+    display: inline-flex;
+    max-inline-size: 100%;
+}

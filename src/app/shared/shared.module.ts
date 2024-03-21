@@ -22,6 +22,7 @@ import { ButtonModalLogInComponent } from './components/button-modal-log-in/butt
 import { MatDialogModule } from '@angular/material/dialog';
 import { HeaderSpotifyComponent } from './components/header-spotify/header-spotify.component';
 import { FooterSpotifyComponent } from './components/footer-spotify/footer-spotify.component';
+import { FilterTracksComponent } from './components/filter-tracks/filter-tracks.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { FooterSpotifyComponent } from './components/footer-spotify/footer-spoti
     ModalLogInComponent,
     ButtonModalLogInComponent,
     HeaderSpotifyComponent,
-    FooterSpotifyComponent
+    FooterSpotifyComponent,
+    FilterTracksComponent
   ],
 
   imports: [
@@ -70,7 +72,8 @@ import { FooterSpotifyComponent } from './components/footer-spotify/footer-spoti
     ModalLogInComponent,
     ButtonModalLogInComponent,
     HeaderSpotifyComponent,
-    FooterSpotifyComponent
+    FooterSpotifyComponent,
+    FilterTracksComponent
   ]
 })
 
