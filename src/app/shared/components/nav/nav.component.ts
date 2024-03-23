@@ -24,4 +24,9 @@ export class NavComponent implements OnInit {
   login() {
     this.router.navigate(['/auth/login'])
   }
+
+  logOut(): void {
+    this.cookieService.delete('token');
+    this.router.navigate(['/offline'])
+  }
 }

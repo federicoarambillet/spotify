@@ -4,6 +4,8 @@
     display: flex;
     cursor: pointer;
     transition: all ease var(--animation-1);
+    justify-content: space-between;
+    max-height: 225px;
 }
 
 .title-track {
@@ -36,7 +38,8 @@
     opacity: 0;
     width: 5rem;
     display: flex;
-    justify-content: center;
+    margin-right: 0.2rem;
+    justify-content: end;
     align-content: center;
     align-items: center;
     transition: all ease var(--animation-1);
@@ -64,7 +67,7 @@
 .card-player.player-big {
     position: relative;
     flex-direction: column;
-    height: 17rem;
+    /* height: 17rem; */
     padding: 0.9rem;
     align-items: center;
 }

@@ -13,7 +13,7 @@
 }
 
 .fill-styles {
-    fill:  var(--color-6);
+    fill: var(--color-4);
     width: 16px;
     height: 16px;
 }
@@ -30,7 +30,7 @@
     overflow: hidden;
     pointer-events: none;
     position: absolute;
-  
+
     z-index: -1;
 }
 
@@ -62,7 +62,7 @@ button {
     color: var(--color-6);
 }
 
-button:hover {
+.space-between-next-back button:hover {
     color: var(--color-4);
 }
 
@@ -78,16 +78,7 @@ button {
     border: 0px;
     border-radius: 9999px;
     cursor: pointer;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    text-transform: none;
-    touch-action: manipulation;
-    transition-duration: 33ms;
-    transition-property: background-color, border-color, color, box-shadow, filter, transform;
-    user-select: none;
     vertical-align: middle;
-    transform: translate3d(0px, 0px, 0px);
     min-inline-size: 0px;
     min-block-size: 48px;
     padding-block-start: 8px;
@@ -97,4 +88,129 @@ button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+}
+
+.container-buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 8px;
+}
+
+.container-buttons {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.button-premium {
+    box-sizing: border-box;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    background-color: var(--color-4);
+    border: 0px;
+    border-radius: 9999px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    padding: 0px;
+    min-inline-size: 0px;
+    align-self: center;
+    padding: 0.5rem;
+    color: var(--color-3);
+}
+
+.button-download {
+    box-sizing: border-box;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    background-color: transparent;
+    border: 0px;
+    border-radius: 9999px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    user-select: none;
+    padding: 0px;
+    min-inline-size: 0px;
+    align-self: center;
+}
+
+.button-download>span {
+    box-sizing: border-box;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.54);
+    color: var(--color-4);
+    display: flex;
+    border-radius: 9999px;
+    font-size: inherit;
+    min-block-size: 32px;
+    align-items: center;
+    justify-content: center;
+    padding-block-start: 4px;
+    padding-block-end: 4px;
+    padding-inline-start: 33px;
+    padding-inline-end: 16px;
+}
+
+.icon {
+    display: flex;
+    position: absolute;
+    left: 12px;
+}
+
+.notification {
+    background-color: var(--background-base);
+    border: none;
+    border-radius: 50%;
+    color: hsla(0, 0%, 100%, .7);
+    display: inline-flex;
+    height: 32px;
+    width: 32px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container-button-notification {
+    background-color: rgba(0, 0, 0, 0.54);
+    border-radius: 100%;
+}
+
+.icon-notification {
+    fill: var(--color-4);
+    width: 15px;
+}
+
+.button-profile {
+    background-color: rgba(0, 0, 0, .54);
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-weight: 700;
+    border: 0px;
+    border-radius: 100%;
+    cursor: pointer;
+    text-align: center;
+    transition-duration: 33ms;
+    transform: translate3d(0px, 0px, 0px);
+    color: var(--color-3);
+    min-inline-size: 0px;
+    padding: 0px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-button-profile {
+    background-color: rgba(0, 0, 0, .54);
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+}
+
+.profile {
+    background-color: rgb(125, 75, 50);
+    color: var(--color-3);
+    line-height: 24px;
+    height: 24px;
+    width: 24px;
+    border-radius: 100%;
 }
