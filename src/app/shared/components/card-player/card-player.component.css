@@ -5,7 +5,7 @@
     cursor: pointer;
     transition: all ease var(--animation-1);
     justify-content: space-between;
-    max-height: 225px;
+    max-height: 265px;
 }
 
 .title-track {

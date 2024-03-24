@@ -5,6 +5,8 @@ export interface TrackModel {
     name: string,
     description?: string,
     album: string,
+    duration: any,
+    fecha_lanzamiento: string,
     cover: string,
     url: string,
     artist?: ArtistModel

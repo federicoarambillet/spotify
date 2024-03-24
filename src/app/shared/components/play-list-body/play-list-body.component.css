@@ -1,12 +1,12 @@
 .play-list-body {
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
 }
 
 .play-list-table-header {
     width: 100%;
     list-style: none;
     display: grid;
-    grid-template-columns: 3fr 2fr 2fr 1fr;
+    grid-template-columns: 4fr 3fr 2fr 1fr;
     margin: 0;
     padding: 0;
     font-size: 90%;
@@ -26,7 +26,7 @@
     width: 100%;
     list-style: none;
     display: grid;
-    grid-template-columns: 3fr 2fr 2fr 1fr;
+    grid-template-columns: 4fr 3fr 2fr 1fr;
     margin: 0;
     padding: 1rem 0 0 0;
 }
@@ -54,4 +54,11 @@
 .cover-section .cover-info .name-track-details {
     font-size: 80%;
     opacity: .7;
+}
+
+
+.play-list-body-favorite{
+    height: 275px;
+    overflow-y: auto;
+    padding: 1rem 1.5rem;
 }

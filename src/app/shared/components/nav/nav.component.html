@@ -16,12 +16,12 @@
             </svg>
         </button>
     </div>
+
     <div class="container-button" *ngIf="!token; else profile">
         <button class="secondary-button" (click)="login()">Sign up</button>
         <app-button-main [mode]="'big'" [title]="'Log in'" (click)="login()"></app-button-main>
     </div>
 </header>
-
 
 <ng-template #profile>
     <div class="container-buttons">

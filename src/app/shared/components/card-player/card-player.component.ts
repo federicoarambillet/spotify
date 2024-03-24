@@ -11,7 +11,7 @@ export class CardPlayerComponent implements OnInit {
   @Input() mode: 'small' | 'big' = 'small';
   @Input() token: boolean = false;
   // @Input() track!: TrackModel;
-  @Input() track: TrackModel = { _id: 0, name: '', album: '', url: '', cover: '' };
+  @Input() track: TrackModel = { _id: 0, name: '', album: '', duration: '', fecha_lanzamiento: '', url: '', cover: '' };
 
   multimediaService = inject(MultimediaService);
 
@@ -25,5 +25,5 @@ export class CardPlayerComponent implements OnInit {
       this.multimediaService.trackInfoSignal.set(track);
     }
   }
-  
+
 }

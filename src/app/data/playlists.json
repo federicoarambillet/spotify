@@ -9,7 +9,7 @@
         {
             "_id": 2,
             "name": "Dinner Jazz",
-            "description": "The gentle sound of some of the greatest voices and instrumentalists in Jazz.",
+            "description": "The gentle sound of some of the greatest voices.",
             "cover": "https://i.scdn.co/image/ab67706f00000002a98e80d2fc9b1cf3b80c4481"
         },
         {
@@ -21,7 +21,7 @@
         {
             "_id": 4,
             "name": "Feel Good Dinner",
-            "description": "An uplifting yet tasteful dinner playlist with a guaranteed feel good vibe.",
+            "description": "An uplifting yet tasteful dinner playlist,feel good vibe.",
             "cover": "https://i.scdn.co/image/ab67706f000000022ba865eb4204be02ce3e8e09"
         },
         {

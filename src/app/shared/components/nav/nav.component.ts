@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
+import { Observable, of } from 'rxjs';
+import { SearchService } from '@modules/history/services/search.service';
 
 @Component({
   selector: 'app-nav',
@@ -11,10 +13,13 @@ import { CookieService } from 'ngx-cookie-service';
 export class NavComponent implements OnInit {
 
   @Input() token: boolean = false;
+  listResults$: Observable<any> = of([])
+
 
   constructor(
     private cookieService: CookieService,
-    private router: Router
+    private router: Router,
+    private searchService: SearchService
   ) { }
 
   ngOnInit(): void {
@@ -29,4 +34,9 @@ export class NavComponent implements OnInit {
     this.cookieService.delete('token');
     this.router.navigate(['/offline'])
   }
+
+  receiveData(event: string): void {
+    this.listResults$ = this.searchService.searchTracks$(event);
+  }
+
 }

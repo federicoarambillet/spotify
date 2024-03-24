@@ -53,6 +53,7 @@ export class TrackService {
   getAllTracks$(): Observable<any> {
     return this.http.get(`${this.URL}/tracks`).pipe(
       map(({ data }: any) => {
+        // console.log(data)
         return data;
       })
     )

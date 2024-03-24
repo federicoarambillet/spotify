@@ -1,8 +1,8 @@
-<div class="play-list-body">
+<div class="play-list-body" [ngClass]="{'play-list-body-favorite':pag === 'favorite'}">
     <ul class="play-list-table-header">
         <li (click)="changeSort('name')">Nombre</li>
-        <li (click)="changeSort('album')">álbum</li>
-        <li (click)="changeSort('duration')">fecha incorporación</li>
+        <li (click)="changeSort('album')">Álbum</li>
+        <li (click)="changeSort('duration')">Fecha lanzamiento</li>
         <li><i class="uil uil-clock-eight"></i></li>
     </ul>
     <ul class="play-list-rows" *ngFor="let track of tracks | orderList: optionSort.property:optionSort.order">
@@ -13,12 +13,11 @@
             {{track.album}}
         </li>
         <li class="track-name-opacity">
-            {{track.album}}
+            {{track.fecha_lanzamiento}}
         </li>
         <li class="track-name-opacity">
-            {{track}}
+            {{track.duration.end}}
         </li>
-
     </ul>
 </div>
 

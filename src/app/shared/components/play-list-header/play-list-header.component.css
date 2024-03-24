@@ -1,9 +1,9 @@
 .play-list-header {
     display: flex;
-    height: 18rem;
+    height: 13rem;
     width: 100%;
-    padding-top: 3rem;
-    padding-bottom: 1rem;
+    /* padding-top: 3rem;
+    padding-bottom: 1rem; */
     background-color: #ffffff14;
 }
 
@@ -40,10 +40,10 @@
     font-weight: 600;
 }
 
-.content-text .title {
+/* .content-text .title {
     font-size: 6rem;
     letter-spacing: -7px;
-}
+} */
 
 .content-text .small-text {
     text-transform: uppercase;

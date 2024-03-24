@@ -11,16 +11,11 @@ export class SearchComponent implements OnInit {
 
   public src: string = '';
 
-  constructor() {
+  constructor() {}
 
-  }
-
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
   callSearch(term: string): void {
-    // console.log(term)
     if (term.toString().length >= 3) {
       this.callbackData.emit(term);
     }

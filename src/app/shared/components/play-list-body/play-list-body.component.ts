@@ -9,8 +9,12 @@ import { TrackService } from '@modules/tracks/services/track.service';
   styleUrls: ['./play-list-body.component.css']
 })
 export class PlayListBodyComponent implements OnInit {
+
   @Input() tracks: TrackModel[] = []
+
   optionSort: { property: string | null, order: string } = { property: null, order: 'asc' }
+
+  @Input() pag: string = '';
 
   constructor(private trackService: TrackService) { }
 

@@ -11,7 +11,7 @@ import { TrackModel } from '@core/models/tracks.model';
 
 export class ButtonModalLogInComponent {
 
-  @Input() track: TrackModel = { _id: 0, name: '', album: '', url: '', cover: '' };
+  @Input() track: TrackModel = { _id: 0, name: '', album: '', duration: '', fecha_lanzamiento: '', url: '', cover: '' };
 
   constructor(public dialog: MatDialog) { }
 
