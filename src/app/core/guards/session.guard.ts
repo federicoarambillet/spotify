@@ -11,6 +11,7 @@ export class SessionGuard  {
   constructor(
     private cookieService: CookieService,
     private router: Router) {
+
   }
 
   canActivate(
