@@ -2,7 +2,7 @@
 
 ![Imagen de página principal del proyecto](https://github.com/federicoarambillet/spotify/blob/main/animation_spotify.gif)
 
-### implemented with
+### Implemented with
 
 - Router Oulet
 - LazyLoading
@@ -14,4 +14,4 @@
 - BehaviorSubject
 - Signal
 
-# © 2024 Federico Arambillet. All rights reserved.
+### © 2024 Federico Arambillet. All rights reserved.
