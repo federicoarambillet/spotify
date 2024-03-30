@@ -1,21 +1,23 @@
 <div class="section--generic">
 
-    <div class="container-title">
-        <h2 class="section--generic__title">{{title}}</h2>
-        <p class="show-all">Show all</p>
-    </div>
+  <div class="container-title">
+    <h2 class="section--generic__title">{{title}}</h2>
+    <p class="show-all">Show all</p>
+  </div>
 
-    <div class="section--generic__player--zone" [ngClass]="{'big':mode === 'big','offline':limit === 5}">
-        <ul class="player--list"
-            [ngClass]="{'card-small':mode === 'small','card-big':mode === 'big','card-limit':limit === 5}">
-            <li *ngFor="let track of dataTracks.slice(0,this.limit)">
-                <app-card-player [token]="token" [track]="track" [mode]="mode"></app-card-player>
-            </li>
-        </ul>
-    </div>
-    <!-- <div *ngIf="mode === 'big'">
-        <app-footer></app-footer>
-    </div> -->
+  <div class="section--generic__player--zone" [ngClass]="{'big':mode === 'big','offline':limit === 5}">
+    <ul class="player--list"
+      [ngClass]="{'card-small':mode === 'small','card-big':mode === 'big','card-limit':limit === 5}">
+      @for (track of dataTracks.slice(0,this.limit); track track) {
+        <li>
+          <app-card-player [token]="token" [track]="track" [mode]="mode"></app-card-player>
+        </li>
+      }
+    </ul>
+  </div>
+  <!-- <div *ngIf="mode === 'big'">
+  <app-footer></app-footer>
+</div> -->
 
 
 </div>
