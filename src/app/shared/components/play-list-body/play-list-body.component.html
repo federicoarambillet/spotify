@@ -1,26 +1,24 @@
 <div class="play-list-body" [ngClass]="{'play-list-body-favorite':pag === 'favorite'}">
   <ul class="play-list-table-header">
-    <li (click)="changeSort('name')">Nombre</li>
-    <li (click)="changeSort('album')">Álbum</li>
-    <li (click)="changeSort('duration')">Fecha lanzamiento</li>
-    <li><i class="uil uil-clock-eight"></i></li>
+      <li (click)="changeSort('name')">Nombre</li>
+      <li (click)="changeSort('album')">Álbum</li>
+      <li (click)="changeSort('duration')">Fecha lanzamiento</li>
+      <li><i class="uil uil-clock-eight"></i></li>
   </ul>
-  @for (track of tracks | orderList: optionSort.property:optionSort.order; track track) {
-    <ul class="play-list-rows">
-      <li class="track-name">
-        <ng-container *ngTemplateOutlet="coverSection;context:{track:track}"></ng-container>
-      </li>
-      <li class="track-name-opacity">
-        {{track.album}}
-      </li>
-      <li class="track-name-opacity">
-        {{track.fecha_lanzamiento}}
-      </li>
-      <li class="track-name-opacity">
-        {{track.duration.end}}
-      </li>
-    </ul>
-  }
+  <ul class="play-list-rows" *ngFor="let track of tracks | orderList: optionSort.property:optionSort.order">
+    <li class="track-name">
+      <ng-container *ngTemplateOutlet="coverSection;context:{track:track}"></ng-container>
+    </li>
+    <li class="track-name-opacity">
+      {{track.album}}
+    </li>
+    <li class="track-name-opacity">
+      {{track.fecha_lanzamiento}}
+    </li>
+    <li class="track-name-opacity">
+      {{track.duration.end}}
+    </li>
+  </ul>
 </div>
 
 <!--template cover-->
